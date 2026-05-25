@@ -9,16 +9,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root{
-  --blue:#017DFF;--blue-dark:#005FCC;--blue-deeper:#003F8A;
-  --blue-light:#E8F2FF;--blue-mid:#1A5FAA;
-  --white:#FFF;--off-white:#F7FAFF;
-  --gray:#666;--text:#1A2A3A;--border:#D0E4F7;
-}
+:root{--blue:#017DFF;--blue-dark:#005FCC;--blue-deeper:#003F8A;--blue-light:#E8F2FF;--blue-mid:#1A5FAA;--white:#FFF;--off-white:#F7FAFF;--gray:#666;--text:#1A2A3A;--border:#D0E4F7;}
 *{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
 body{font-family:'Noto Sans JP',sans-serif;background:var(--white);color:var(--text);}
-
 header{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--white);border-bottom:1px solid var(--border);box-shadow:0 2px 12px rgba(1,125,255,0.08);}
 .header-top{display:flex;align-items:center;justify-content:center;padding:10px 40px;border-bottom:1px solid var(--border);}
 .logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
@@ -34,49 +28,41 @@ nav{display:flex;align-items:center;justify-content:center;background:var(--blue
 .nav-dropdown a{display:block;padding:10px 16px;font-size:13px;color:var(--text);text-decoration:none;border-bottom:1px solid var(--border);transition:background .15s;}
 .nav-dropdown a:last-child{border-bottom:none;}
 .nav-dropdown a:hover{background:var(--blue-light);color:var(--blue);}
-.nav-dropdown a.active{color:var(--blue);font-weight:700;}
 
-.page-hero{margin-top:113px;background:linear-gradient(135deg,var(--blue-deeper),var(--blue-mid),var(--blue));padding:56px 80px;position:relative;overflow:hidden;text-align:center;}
-.page-hero::before{content:'';position:absolute;inset:0;background:url('assets/work-photo1.png') center/cover;opacity:.1;}
+.page-hero{margin-top:113px;background:linear-gradient(135deg,var(--blue-deeper),var(--blue-mid),var(--blue));padding:56px 80px;text-align:center;position:relative;overflow:hidden;}
+.page-hero::before{content:'';position:absolute;inset:0;opacity:.1;}
 .page-hero h1{font-family:'Noto Serif JP',serif;font-size:34px;font-weight:700;color:white;letter-spacing:.1em;margin-bottom:8px;position:relative;}
 .page-hero p{font-size:13px;color:rgba(255,255,255,.55);letter-spacing:.2em;font-family:'DM Mono',monospace;position:relative;}
 
-/* タブナビ */
 .tab-nav{background:var(--off-white);border-bottom:1px solid var(--border);display:flex;justify-content:center;position:sticky;top:113px;z-index:90;}
 .tab-nav a{padding:14px 32px;font-size:14px;text-decoration:none;color:var(--gray);border-bottom:3px solid transparent;transition:all .2s;white-space:nowrap;}
 .tab-nav a:hover{color:var(--blue);}
 .tab-nav a.active{color:var(--blue);font-weight:700;border-bottom-color:var(--blue);}
-
 .tab-content{display:none;}
 .tab-content.active{display:block;}
 
-/* サブタブ */
-.sub-nav{background:var(--white);border-bottom:1px solid var(--border);display:flex;flex-wrap:wrap;gap:0;padding:0 40px;}
-.sub-btn{padding:10px 20px;font-size:13px;border:none;background:none;cursor:pointer;color:var(--gray);border-bottom:2px solid transparent;transition:all .15s;font-family:'Noto Sans JP',sans-serif;}
+.sub-nav{background:var(--white);border-bottom:1px solid var(--border);display:flex;flex-wrap:wrap;gap:0;padding:0 20px;}
+.sub-btn{padding:10px 16px;font-size:13px;border:none;background:none;cursor:pointer;color:var(--gray);border-bottom:2px solid transparent;transition:all .15s;font-family:'Noto Sans JP',sans-serif;white-space:nowrap;}
 .sub-btn:hover{color:var(--blue);}
 .sub-btn.active{color:var(--blue);font-weight:700;border-bottom-color:var(--blue);}
 
-/* テーブル */
-.table-section{padding:48px 40px;max-width:1100px;margin:0 auto;}
-.table-title{font-family:'Noto Serif JP',serif;font-size:22px;font-weight:700;margin-bottom:24px;padding-bottom:12px;border-bottom:2px solid var(--blue);display:flex;align-items:center;gap:10px;}
-.table-title::before{content:'';width:5px;height:22px;background:var(--blue);border-radius:3px;}
-.works-table{width:100%;border-collapse:collapse;font-size:13px;margin-bottom:48px;}
-.works-table th{background:var(--blue);color:white;padding:11px 14px;text-align:left;font-weight:500;letter-spacing:.05em;}
-.works-table td{padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top;line-height:1.6;}
+.table-section{padding:40px;max-width:1100px;margin:0 auto;}
+.table-title{font-family:'Noto Serif JP',serif;font-size:20px;font-weight:700;margin-bottom:20px;padding-bottom:10px;border-bottom:2px solid var(--blue);display:flex;align-items:center;gap:10px;}
+.table-title::before{content:'';width:5px;height:20px;background:var(--blue);border-radius:3px;}
+.works-table{width:100%;border-collapse:collapse;font-size:13px;margin-bottom:40px;}
+.works-table th{background:var(--blue);color:white;padding:10px 12px;text-align:left;font-weight:500;letter-spacing:.05em;}
+.works-table td{padding:9px 12px;border-bottom:1px solid var(--border);vertical-align:top;line-height:1.6;}
 .works-table tr:nth-child(even){background:var(--off-white);}
 .works-table tr:hover{background:var(--blue-light);}
-.works-table .amount{text-align:right;font-family:'DM Mono',monospace;white-space:nowrap;}
-.works-table .date{white-space:nowrap;color:var(--gray);}
+.works-table .amount{text-align:right;font-family:'DM Mono',monospace;white-space:nowrap;font-size:12px;}
+.works-table .date{white-space:nowrap;color:var(--gray);font-size:12px;}
 
-/* ESCO */
 .esco-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:24px;}
-.esco-card{background:var(--off-white);border:1px solid var(--border);border-top:3px solid var(--blue);border-radius:4px;padding:28px 24px;}
+.esco-card{background:var(--off-white);border:1px solid var(--border);border-top:3px solid var(--blue);border-radius:4px;padding:24px;}
 .esco-card h3{font-size:16px;font-weight:700;color:var(--blue);margin-bottom:12px;}
 .esco-card p{font-size:13px;color:var(--gray);line-height:1.9;}
-.esco-point{display:flex;gap:10px;align-items:flex-start;margin-top:10px;}
-.esco-point-num{font-family:'DM Mono',monospace;font-size:18px;color:var(--blue);font-weight:700;flex-shrink:0;}
 
-footer{background:var(--blue-deeper);color:white;padding:48px 80px 24px;margin-top:80px;}
+footer{background:var(--blue-deeper);color:white;padding:48px 80px 24px;margin-top:60px;}
 .footer-inner{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px;}
 .footer-logo{display:flex;align-items:center;gap:10px;margin-bottom:12px;}
 .footer-logo img{height:36px;}
@@ -95,10 +81,11 @@ footer{background:var(--blue-deeper);color:white;padding:48px 80px 24px;margin-t
   .page-hero{padding:40px 20px;margin-top:100px;}
   .tab-nav{overflow-x:auto;justify-content:flex-start;top:100px;}
   .tab-nav a{padding:12px 16px;font-size:13px;}
-  .sub-nav{padding:0 16px;}
-  .table-section{padding:32px 16px;}
-  .works-table{font-size:12px;}
-  .works-table th,.works-table td{padding:8px 10px;}
+  .sub-nav{padding:0 8px;}
+  .sub-btn{padding:8px 10px;font-size:12px;}
+  .table-section{padding:24px 16px;}
+  .works-table{font-size:11px;}
+  .works-table th,.works-table td{padding:7px 8px;}
   .esco-cards{grid-template-columns:1fr;}
   footer{padding:40px 20px 20px;}
   .footer-inner{grid-template-columns:1fr 1fr;gap:24px;}
@@ -117,23 +104,9 @@ footer{background:var(--blue-deeper);color:white;padding:48px 80px 24px;margin-t
   </div>
   <nav>
     <a href="index.html" class="nav-item"><img class="nav-icon" src="assets/building-_1_.svg" alt="">ホーム</a>
-    <a href="company.html" class="nav-item">
-      <img class="nav-icon" src="assets/building (2).svg" alt="">会社情報
-      <div class="nav-dropdown">
-        <a href="company.html">会社概要</a>
-        <a href="company.html#quality">品質方針</a>
-        <a href="company.html#history">会社沿革</a>
-      </div>
-    </a>
+    <a href="company.html" class="nav-item"><img class="nav-icon" src="assets/building (2).svg" alt="">会社情報<div class="nav-dropdown"><a href="company.html">会社概要</a><a href="company.html#quality">品質方針</a><a href="company.html#history">会社沿革</a></div></a>
     <a href="services.html" class="nav-item"><img class="nav-icon" src="assets/iconmonstr-wrench-10.svg" alt="">事業内容</a>
-    <a href="achievements.html" class="nav-item active">
-      <img class="nav-icon" src="assets/folder.svg" alt="">施工実績
-      <div class="nav-dropdown">
-        <a href="#" class="active" onclick="showTab('public');return false;">公共工事</a>
-        <a href="#" onclick="showTab('private');return false;">民間工事</a>
-        <a href="#" onclick="showTab('esco');return false;">ESCO事業</a>
-      </div>
-    </a>
+    <a href="achievements.html" class="nav-item active"><img class="nav-icon" src="assets/folder.svg" alt="">施工実績<div class="nav-dropdown"><a href="#" onclick="showTab('public');return false;">公共工事</a><a href="#" onclick="showTab('private');return false;">民間工事</a><a href="#" onclick="showTab('esco');return false;">ESCO事業</a></div></a>
     <a href="recruit.html" class="nav-item"><img class="nav-icon" src="assets/group (1).svg" alt="">採用情報</a>
     <a href="contact.html" class="nav-item"><img class="nav-icon" src="assets/phone-ringing.svg" alt="">お問い合わせ</a>
   </nav>
@@ -150,12 +123,13 @@ footer{background:var(--blue-deeper);color:white;padding:48px 80px 24px;margin-t
   <a href="#" id="tab-esco-btn" onclick="showTab('esco');return false;">ESCO事業</a>
 </div>
 
-<!-- 公共工事 -->
+<!-- ======== 公共工事 ======== -->
 <div id="tab-public" class="tab-content active">
   <div class="sub-nav">
-    <button class="sub-btn active" onclick="showSub('public','housing')">住宅新築工事</button>
-    <button class="sub-btn" onclick="showSub('public','school')">学校新築工事</button>
-    <button class="sub-btn" onclick="showSub('public','other')">その他公共工事</button>
+    <button class="sub-btn active" onclick="showSub('public','housing')">住宅新築</button>
+    <button class="sub-btn" onclick="showSub('public','school')">学校新築</button>
+    <button class="sub-btn" onclick="showSub('public','repair')">改修工事</button>
+    <button class="sub-btn" onclick="showSub('public','other')">その他</button>
   </div>
 
   <div id="public-housing" class="table-section">
@@ -211,6 +185,74 @@ footer{background:var(--blue-deeper);color:white;padding:48px 80px 24px;margin-t
     </table>
   </div>
 
+  <div id="public-repair" class="table-section" style="display:none;">
+    <div class="table-title">改修工事（公共）</div>
+    <table class="works-table">
+      <thead><tr><th>竣工</th><th>工事名称</th><th>発注者名</th><th>請負額（円）</th></tr></thead>
+      <tbody>
+        <tr><td class="date">令和7年6月</td><td>大阪府咲洲庁舎47階空調用加湿器改修工事</td><td>大阪府</td><td class="amount">2,240,000</td></tr>
+        <tr><td class="date">令和7年3月</td><td>PC14残置3棟機械改修工事</td><td>東洋建設(株)</td><td class="amount">6,600,000</td></tr>
+        <tr><td class="date">令和7年3月</td><td>ユニットWC外部配管工事</td><td>東洋建設(株)</td><td class="amount">1,100,000</td></tr>
+        <tr><td class="date">令和7年2月</td><td>公社 香里三井団地 給水塔給水設備改修工事</td><td>大阪府住宅供給公社</td><td class="amount">58,298,102</td></tr>
+        <tr><td class="date">令和7年2月</td><td>大阪府立東高等学校外1校体育館競技場空調設備改修工事</td><td>大阪府</td><td class="amount">67,124,000</td></tr>
+        <tr><td class="date">令和6年12月</td><td>PC17新マリンハウス 屋外設備工事(受水槽分）</td><td>東洋建設(株)</td><td class="amount">22,600,000</td></tr>
+        <tr><td class="date">令和6年11月</td><td>鶴ヶ丘住宅（7〜11号館）排水管改修工事</td><td>大阪市</td><td class="amount">85,927,000</td></tr>
+        <tr><td class="date">令和6年11月</td><td>御崎住宅（7〜9号館）給水管改修工事</td><td>大阪市</td><td class="amount">60,509,000</td></tr>
+        <tr><td class="date">令和6年8月</td><td>大阪府立寝屋川支援学校 12棟1階 空調配管修理作業</td><td>大阪府立 寝屋川支援学校</td><td class="amount">1,630,000</td></tr>
+        <tr><td class="date">令和6年4月</td><td>阪神国際港湾神戸PIコンテナ南ふ頭再整備工事 メンテナンスショップ（CON）改修計画ボイラー設置工事</td><td>東洋建設(株)</td><td class="amount">3,750,000</td></tr>
+        <tr><td class="date">令和6年3月</td><td>大阪府咲洲庁舎47階内部改修工事に伴う機械設備工事</td><td>あべの建設(株)</td><td class="amount">41,909,000</td></tr>
+        <tr><td class="date">令和6年3月</td><td>KKRホテル大阪 10階個別空調整備工事</td><td>国家公務員共済組合</td><td class="amount">43,000,000</td></tr>
+        <tr><td class="date">令和6年1月</td><td>メンテナンスショップ（CON）改修計画</td><td>東洋建設(株)</td><td class="amount">4,810,000</td></tr>
+        <tr><td class="date">令和6年1月</td><td>大阪がん循環器病センター空調設備改修工事</td><td>大阪府</td><td class="amount">69,829,000</td></tr>
+        <tr><td class="date">令和5年11月</td><td>大阪府営八尾二俣住宅外2住宅量水器取替その他工事</td><td>大阪府住宅供給公社</td><td class="amount">21,645,000</td></tr>
+        <tr><td class="date">令和5年9月</td><td>大阪府立高槻支援学校体育館競技場その他空調設備工事</td><td>大阪府</td><td class="amount">43,568,000</td></tr>
+        <tr><td class="date">令和5年3月</td><td>天王寺スポーツセンター他1施設温水ヒーター設備改修工事</td><td>大阪市</td><td class="amount">34,166,000</td></tr>
+        <tr><td class="date">令和5年3月</td><td>大阪府咲洲庁舎46階内部改修工事に伴う機械設備工事</td><td>大阪府</td><td class="amount">40,000,000</td></tr>
+        <tr><td class="date">令和5年3月</td><td>大阪府営藤井寺小山藤美住宅外1住宅給湯器取替工事</td><td>大阪府</td><td class="amount">47,621,000</td></tr>
+        <tr><td class="date">令和4年10月</td><td>大桐住宅（5号館）排水管改修工事</td><td>大阪市</td><td class="amount">55,115,000</td></tr>
+        <tr><td class="date">令和4年9月</td><td>大阪府立大阪北視覚支援学校外1校体育館競技場空調設備工事</td><td>大阪府</td><td class="amount">52,416,000</td></tr>
+        <tr><td class="date">令和4年3月</td><td>国際学友会館空調設備改修工事</td><td>大阪市</td><td class="amount">23,544,000</td></tr>
+        <tr><td class="date">令和4年3月</td><td>東住吉スポーツセンター空調設備改修工事</td><td>大阪市</td><td class="amount">34,108,000</td></tr>
+        <tr><td class="date">令和4年2月</td><td>南港北中学校体育館空調機設置機械設備工事</td><td>大阪市</td><td class="amount">24,590,000</td></tr>
+        <tr><td class="date">令和4年1月</td><td>大阪府泉北府民センタービル空調設備改修工事</td><td>大阪市</td><td class="amount">42,570,000</td></tr>
+        <tr><td class="date">令和4年1月</td><td>井高野中学校体育館空調機設置機械設備工事</td><td>大阪市</td><td class="amount">22,267,000</td></tr>
+        <tr><td class="date">令和4年1月</td><td>東三国中学校体育館空調機設置機械設備工事</td><td>大阪市</td><td class="amount">25,478,000</td></tr>
+        <tr><td class="date">令和4年1月</td><td>もと都島勤労青少年ホーム他1施設空調設備改修工事</td><td>大阪市</td><td class="amount">23,825,000</td></tr>
+        <tr><td class="date">令和3年12月</td><td>福島スポーツセンター空調設備改修工事</td><td>大阪市</td><td class="amount">18,000,000</td></tr>
+        <tr><td class="date">令和3年12月</td><td>深江小学校冷房機械設備工事</td><td>大阪市</td><td class="amount">13,864,000</td></tr>
+        <tr><td class="date">令和3年11月</td><td>伝法小学校便所改修衛生設備工事</td><td>大阪市</td><td class="amount">19,451,000</td></tr>
+        <tr><td class="date">令和3年11月</td><td>波除小学校冷房機械設備工事</td><td>大阪市</td><td class="amount">7,257,000</td></tr>
+        <tr><td class="date">令和3年9月</td><td>大阪府立八尾支援学校空調設備改修工事</td><td>大阪府</td><td class="amount">87,340,000</td></tr>
+        <tr><td class="date">令和3年9月</td><td>高津中学校体育館空調機設置機械設備工事</td><td>大阪市</td><td class="amount">23,604,000</td></tr>
+        <tr><td class="date">令和3年9月</td><td>十三中学校体育館空調機設置機械設備工事</td><td>大阪市</td><td class="amount">19,954,000</td></tr>
+        <tr><td class="date">令和3年9月</td><td>東中学校体育館空調機設置機械設備工事</td><td>大阪市</td><td class="amount">23,293,000</td></tr>
+        <tr><td class="date">令和3年9月</td><td>友渕小学校冷房機械設備工事</td><td>大阪市</td><td class="amount">10,060,000</td></tr>
+        <tr><td class="date">令和3年9月</td><td>巽東小学校冷房機械設備工事</td><td>大阪市</td><td class="amount">11,897,000</td></tr>
+        <tr><td class="date">令和3年9月</td><td>住之江中学校冷房機械設備工事</td><td>大阪市</td><td class="amount">17,761,000</td></tr>
+        <tr><td class="date">令和3年9月</td><td>大宮西小学校直結給水化改修工事</td><td>大阪市</td><td class="amount">3,000,000</td></tr>
+        <tr><td class="date">令和3年3月</td><td>大淀コミュニティセンター便所改修衛生設備工事</td><td>大阪市</td><td class="amount">15,138,000</td></tr>
+        <tr><td class="date">令和3年3月</td><td>浪速第5保育所空調設備改修工事</td><td>大阪市</td><td class="amount">8,993,000</td></tr>
+        <tr><td class="date">令和3年2月</td><td>大阪府中央卸売市場給水設備改修工事</td><td>大阪府</td><td class="amount">66,782,000</td></tr>
+        <tr><td class="date">令和2年12月</td><td>海老江東小学校直結給水化改修その他工事</td><td>大阪市</td><td class="amount">13,000,000</td></tr>
+        <tr><td class="date">令和2年12月</td><td>苅田北小学校冷房機械設備工事</td><td>大阪市</td><td class="amount">9,000,000</td></tr>
+        <tr><td class="date">令和2年11月</td><td>吹田市立高野台小学校校舎大規模改造2期及びトイレリニューアル工事</td><td>吹田市</td><td class="amount">124,995,000</td></tr>
+        <tr><td class="date">令和2年11月</td><td>大阪府営 岸部第1住宅 受水施設改修その他工事</td><td>大阪府住宅供給公社</td><td class="amount">7,000,000</td></tr>
+        <tr><td class="date">令和2年11月</td><td>新東三国小学校冷房機械設備工事</td><td>大阪市</td><td class="amount">4,000,000</td></tr>
+        <tr><td class="date">令和2年9月</td><td>明治小学校普通教室改造機械設備工事</td><td>大阪市</td><td class="amount">21,655,000</td></tr>
+        <tr><td class="date">令和2年9月</td><td>浪速小学校・日本橋中学校冷房機械設備工事</td><td>大阪市</td><td class="amount">23,664,000</td></tr>
+        <tr><td class="date">令和2年3月</td><td>吹田市立佐竹台小学校給食調理室改修2期工事</td><td>吹田市</td><td class="amount">11,650,000</td></tr>
+        <tr><td class="date">令和2年1月</td><td>加美神明第2住宅（2号館）給水管改修工事</td><td>大阪市</td><td class="amount">12,202,000</td></tr>
+        <tr><td class="date">令和元年8月</td><td>東大阪市立小学校空調設備整備事業（英田北・英田南・玉串・花園北小学校）</td><td>東大阪設備工業(株)</td><td class="amount">—</td></tr>
+        <tr><td class="date">令和元年6月</td><td>姫島幼稚園外4園保育室空調機設置機械設備工事</td><td>大阪市</td><td class="amount">24,917,000</td></tr>
+        <tr><td class="date">平成31年2月</td><td>水上消防署ガス吸収式空調設備その他改修工事</td><td>大阪市</td><td class="amount">91,096,000</td></tr>
+        <tr><td class="date">平成31年2月</td><td>大阪府営八尾山本住宅外2住宅給湯器取替工事</td><td>大阪府住宅供給公社</td><td class="amount">70,850,000</td></tr>
+        <tr><td class="date">平成27年12月</td><td>中央区役所便所改修その他機械設備工事</td><td>大阪市</td><td class="amount">32,989,000</td></tr>
+        <tr><td class="date">平成27年2月</td><td>公社茶山台団地屋外給水管改修工事（第2工区）</td><td>大阪市住宅供給公社</td><td class="amount">105,233,000</td></tr>
+        <tr><td class="date">平成11年12月</td><td>大阪大学蛋白質研究所超伝導核磁気共鳴棟改修機械設備工事</td><td>大阪大学</td><td class="amount">49,680,000</td></tr>
+      </tbody>
+    </table>
+  </div>
+
   <div id="public-other" class="table-section" style="display:none;">
     <div class="table-title">その他公共工事</div>
     <table class="works-table">
@@ -221,7 +263,6 @@ footer{background:var(--blue-deeper);color:white;padding:48px 80px 24px;margin-t
         <tr><td class="date">令和2年12月</td><td>佃保育所新築機械設備工事</td><td>大阪市</td><td class="amount">46,044,000</td></tr>
         <tr><td class="date">令和2年9月</td><td>(仮称)天王寺動物園教育普及関連及び休憩施設建設機械設備工事</td><td>大阪市</td><td class="amount">70,682,850</td></tr>
         <tr><td class="date">平成25年〜</td><td>給水装置改良工事・経年給水管整備工事（複数年度）</td><td>大阪市水道局</td><td class="amount">—</td></tr>
-        <tr><td class="date">平成11年3月</td><td>大阪大学蛋白質研究所超伝導核磁気共鳴棟改修機械設備工事</td><td>大阪大学</td><td class="amount">49,680,000</td></tr>
         <tr><td class="date">平成11年3月</td><td>造幣局局内空調機整備工事</td><td>造幣局</td><td class="amount">32,445,000</td></tr>
         <tr><td class="date">平成4年3月</td><td>朝日橋公園詰所新築機械設備工事</td><td>大阪市都市整備局</td><td class="amount">3,090,000</td></tr>
       </tbody>
@@ -229,11 +270,21 @@ footer{background:var(--blue-deeper);color:white;padding:48px 80px 24px;margin-t
   </div>
 </div>
 
-<!-- 民間工事 -->
+<!-- ======== 民間工事 ======== -->
 <div id="tab-private" class="tab-content">
   <div class="sub-nav">
     <button class="sub-btn active" onclick="showSub('private','mansion')">マンション</button>
     <button class="sub-btn" onclick="showSub('private','building')">一般ビル</button>
+    <button class="sub-btn" onclick="showSub('private','welfare')">福祉施設</button>
+    <button class="sub-btn" onclick="showSub('private','nursery')">保育園</button>
+    <button class="sub-btn" onclick="showSub('private','store')">店舗・スーパー</button>
+    <button class="sub-btn" onclick="showSub('private','factory')">工場・倉庫</button>
+    <button class="sub-btn" onclick="showSub('private','pachinko')">パチンコ店</button>
+    <button class="sub-btn" onclick="showSub('private','hospital')">病院・医院</button>
+    <button class="sub-btn" onclick="showSub('private','spa')">スーパー銭湯</button>
+    <button class="sub-btn" onclick="showSub('private','hotel')">ホテル</button>
+    <button class="sub-btn" onclick="showSub('private','house')">住宅</button>
+    <button class="sub-btn" onclick="showSub('private','repair')">改修工事</button>
   </div>
 
   <div id="private-mansion" class="table-section">
@@ -259,7 +310,6 @@ footer{background:var(--blue-deeper);color:white;padding:48px 80px 24px;margin-t
         <tr><td class="date">平成22年3月</td><td>ブランズ松屋町新築工事</td><td>石黒建設(株)</td><td class="amount">66,672,000</td></tr>
         <tr><td class="date">平成19年5月</td><td>プレステージ豊中北桜塚新築工事</td><td>三和建設(株)</td><td class="amount">19,950,000</td></tr>
         <tr><td class="date">平成17年3月</td><td>箕面コーポラティブハウス新築工事</td><td>まこと建設(株)</td><td class="amount">14,458,000</td></tr>
-        <tr><td class="date">平成14年12月</td><td>(仮称)郡マンション新築工事</td><td>野村建設工業(株)</td><td class="amount">12,168,000</td></tr>
         <tr><td class="date">平成14年9月</td><td>セレッソコート天王寺新築工事</td><td>(株)朝日工業社</td><td class="amount">74,130,000</td></tr>
         <tr><td class="date">平成14年6月</td><td>ダイアパレス豊中西泉丘新築工事</td><td>(株)朝日工業社</td><td class="amount">99,655,000</td></tr>
         <tr><td class="date">平成14年3月</td><td>東急ドエル・アルス東心斎橋1丁目新築工事</td><td>東亜建設工業(株)</td><td class="amount">84,000,000</td></tr>
@@ -280,16 +330,11 @@ footer{background:var(--blue-deeper);color:white;padding:48px 80px 24px;margin-t
         <tr><td class="date">令和5年8月</td><td>(仮称)豆村自動車ショールーム新築工事</td><td>まこと建設(株)</td><td class="amount">27,160,000</td></tr>
         <tr><td class="date">令和5年3月</td><td>西梅田シティクリニック移転新装工事</td><td>(株)タモツコーポレーション</td><td class="amount">42,500,000</td></tr>
         <tr><td class="date">令和5年2月</td><td>栄本町事務所ビル新築工事</td><td>まこと建設(株)</td><td class="amount">15,800,000</td></tr>
-        <tr><td class="date">令和4年11月</td><td>心斎橋かつら屋改修工事・昭和ビルディング改修工事</td><td>まこと建設(株)</td><td class="amount">10,430,000</td></tr>
-        <tr><td class="date">令和4年8月</td><td>K-BLDG新築工事</td><td>(株)タモツコーポレーション</td><td class="amount">4,400,000</td></tr>
         <tr><td class="date">令和3年11月</td><td>SPK株式会社 近畿営業所新築工事</td><td>まこと建設(株)</td><td class="amount">16,690,000</td></tr>
         <tr><td class="date">令和3年8月</td><td>花音工房 新築工事</td><td>コーナン建設(株)</td><td class="amount">19,760,000</td></tr>
         <tr><td class="date">令和元年11月</td><td>堺市八田寺町町内会館 新築工事</td><td>まこと建設(株)</td><td class="amount">15,330,000</td></tr>
         <tr><td class="date">平成30年7月</td><td>(株)アリガ大阪市店 新社屋新築工事</td><td>コーナン建設(株)</td><td class="amount">14,120,000</td></tr>
         <tr><td class="date">平成30年1月</td><td>(仮称)南堀江プロジェクト新築工事</td><td>コーナン建設(株)</td><td class="amount">42,282,000</td></tr>
-        <tr><td class="date">平成29年2月</td><td>(仮称)紅梅町 K.BUILD新築工事</td><td>まこと建設(株)</td><td class="amount">6,156,000</td></tr>
-        <tr><td class="date">平成28年10月</td><td>(仮称)北堀江プロジェクト新築工事</td><td>まこと建設(株)</td><td class="amount">12,096,000</td></tr>
-        <tr><td class="date">平成28年4月</td><td>専修学校クラーク高等学院大阪梅田校増築工事及び用途変更工事</td><td>まこと建設(株)</td><td class="amount">18,144,000</td></tr>
         <tr><td class="date">平成26年6月</td><td>石堂硝子(株)本社ビル新館新築及び改修工事</td><td>コーナン建設(株)</td><td class="amount">19,904,000</td></tr>
         <tr><td class="date">平成25年10月</td><td>白岩内科医院新築工事</td><td>東洋建設(株)</td><td class="amount">34,183,000</td></tr>
         <tr><td class="date">平成19年8月</td><td>大日精化工業(株) 西日本支社新築工事</td><td>(株)朝日工業社</td><td class="amount">63,000,000</td></tr>
@@ -297,42 +342,230 @@ footer{background:var(--blue-deeper);color:white;padding:48px 80px 24px;margin-t
       </tbody>
     </table>
   </div>
+
+  <div id="private-welfare" class="table-section" style="display:none;">
+    <div class="table-title">福祉施設新築工事</div>
+    <table class="works-table">
+      <thead><tr><th>竣工</th><th>工事名称</th><th>発注者名</th><th>請負額（円）</th></tr></thead>
+      <tbody>
+        <tr><td class="date">令和5年7月</td><td>(仮称)西宮市高塚町ＰＪ新築工事 医療法人みどり会</td><td>(株)プレジオ</td><td class="amount">212,140,000</td></tr>
+        <tr><td class="date">令和5年3月</td><td>障がい者就労支援事業所（仮称）パラグリーン新築工事</td><td>(株)タモツコーポレーション</td><td class="amount">30,000,000</td></tr>
+        <tr><td class="date">令和5年1月</td><td>(仮称)大阪市北区大淀中老人ホーム新築工事</td><td>(株)タモツコーポレーション</td><td class="amount">82,300,000</td></tr>
+        <tr><td class="date">令和4年2月</td><td>(仮称)ロイヤルホーム下新庄新築工事</td><td>(株)タモツコーポレーション</td><td class="amount">102,500,000</td></tr>
+        <tr><td class="date">令和3年3月</td><td>みどり会 グループホームたんぽぽ移転新築工事</td><td>(株)タモツコーポレーション</td><td class="amount">42,000,000</td></tr>
+        <tr><td class="date">令和3年3月</td><td>ミルキーウェイ移転新築工事</td><td>(株)タモツコーポレーション</td><td class="amount">26,000,000</td></tr>
+        <tr><td class="date">令和3年2月</td><td>松樹会特別養護老人ホームいこいの里 増築工事</td><td>(株)タモツコーポレーション</td><td class="amount">63,300,000</td></tr>
+        <tr><td class="date">令和3年2月</td><td>(仮称)地域密着型特養いこいの里長尾 看護小規模多機能ホームながお新築工事</td><td>(株)タモツコーポレーション</td><td class="amount">105,000,000</td></tr>
+        <tr><td class="date">令和元年6月</td><td>ハートフルふしお増築工事</td><td>まこと建設(株)</td><td class="amount">43,030,000</td></tr>
+        <tr><td class="date">平成30年10月</td><td>(仮称)大和田6丁目小規模施設新築工事</td><td>コーナン建設(株)</td><td class="amount">47,900,000</td></tr>
+        <tr><td class="date">平成30年2月</td><td>サテライト向日葵 新築工事</td><td>コーナン建設(株)</td><td class="amount">83,379,000</td></tr>
+        <tr><td class="date">平成29年10月</td><td>(仮称)さざなみ鶴見 GH新築工事</td><td>(株)タモツコーポレーション</td><td class="amount">25,920,000</td></tr>
+        <tr><td class="date">平成29年3月</td><td>豊中市向丘一丁目有料老人ホーム新築工事</td><td>コーナン建設(株)</td><td class="amount">86,400,000</td></tr>
+        <tr><td class="date">平成28年4月</td><td>さくらの詩プロジェクト新築工事</td><td>(株)渡部工業所</td><td class="amount">128,304,000</td></tr>
+        <tr><td class="date">平成27年2月</td><td>(仮称)八尾市地域密高齢者施設 楽寿新築工事</td><td>コーナン建設(株)</td><td class="amount">108,788,000</td></tr>
+        <tr><td class="date">平成27年1月</td><td>いちょうの里新築工事(空調換気工事)</td><td>まこと建設(株)</td><td class="amount">33,102,000</td></tr>
+        <tr><td class="date">平成26年4月</td><td>遊陶里新築工事</td><td>コーナン建設(株)</td><td class="amount">79,650,000</td></tr>
+        <tr><td class="date">平成24年6月</td><td>ロングライフ苦楽園別邸新築工事</td><td>まこと建設(株)</td><td class="amount">56,862,000</td></tr>
+        <tr><td class="date">平成18年10月</td><td>介護老人保健施設「こころ上牧」新築工事</td><td>三和建設(株)</td><td class="amount">64,050,000</td></tr>
+        <tr><td class="date">平成11年4月</td><td>聖徳会大阪老人ホーム新築工事に伴う空調設備工事</td><td>(株)きんでん</td><td class="amount">51,450,000</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div id="private-nursery" class="table-section" style="display:none;">
+    <div class="table-title">保育園新築工事</div>
+    <table class="works-table">
+      <thead><tr><th>竣工</th><th>工事名称</th><th>発注者名</th><th>請負額（円）</th></tr></thead>
+      <tbody>
+        <tr><td class="date">令和7年3月</td><td>ミード保育園立替工事</td><td>(株)タモツコーポレーション</td><td class="amount">67,870,000</td></tr>
+        <tr><td class="date">令和3年5月</td><td>(仮称)勢至学園保育所本園改築工事</td><td>まこと建設(株)</td><td class="amount">27,500,000</td></tr>
+        <tr><td class="date">令和2年2月</td><td>神童幼稚園分園新築に伴う機械設備工事</td><td>まこと建設(株)</td><td class="amount">21,700,000</td></tr>
+        <tr><td class="date">平成31年2月</td><td>旭丘まぶね保育園改修工事</td><td>(株)高橋工務店</td><td class="amount">31,250,000</td></tr>
+        <tr><td class="date">平成30年3月</td><td>円町まぶね隣保育園 改築工事 機械設備工事</td><td>大平建設工業(株)</td><td class="amount">30,132,000</td></tr>
+        <tr><td class="date">平成29年7月</td><td>(仮称)羽鷹池保育園 新築工事</td><td>まこと建設(株)</td><td class="amount">34,662,000</td></tr>
+        <tr><td class="date">平成29年4月</td><td>東泉丘ひだまり保育園 開設工事</td><td>まこと建設(株)</td><td class="amount">16,902,000</td></tr>
+        <tr><td class="date">平成28年3月</td><td>(仮称)えいらく保育園 新築工事</td><td>東洋建設(株)</td><td class="amount">53,244,000</td></tr>
+        <tr><td class="date">平成27年7月</td><td>(仮称)YPC保育園 新築工事</td><td>(株)大栄建設工業</td><td class="amount">23,771,000</td></tr>
+        <tr><td class="date">平成26年12月</td><td>キングダムキッズ磯路 新築工事</td><td>(株)大栄建設工業</td><td class="amount">4,768,000</td></tr>
+        <tr><td class="date">平成25年3月</td><td>ドレミ保育園 改築工事</td><td>浦安工業(株)</td><td class="amount">32,340,000</td></tr>
+        <tr><td class="date">平成25年3月</td><td>石津川保育園 増改修工事</td><td>東洋建設(株)</td><td class="amount">32,340,000</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div id="private-store" class="table-section" style="display:none;">
+    <div class="table-title">店舗・スーパー新築工事</div>
+    <table class="works-table">
+      <thead><tr><th>竣工</th><th>工事名称</th><th>発注者名</th><th>請負額（円）</th></tr></thead>
+      <tbody>
+        <tr><td class="date">令和7年1月</td><td>(仮称)コーナンPRO東住吉店新築工事</td><td>岡野消防設備(株)</td><td class="amount">10,620,000</td></tr>
+        <tr><td class="date">令和5年6月</td><td>スーパーマルハチみてじま店給排水衛生設備改修工事</td><td>(株)タモツコーポレーション</td><td class="amount">12,500,000</td></tr>
+        <tr><td class="date">令和4年4月</td><td>スーパーマルハチ鷹取店改装工事</td><td>(株)タモツコーポレーション</td><td class="amount">16,100,000</td></tr>
+        <tr><td class="date">令和3年11月</td><td>スーパーマルハチ王子公園店改装工事</td><td>(株)タモツコーポレーション</td><td class="amount">13,230,000</td></tr>
+        <tr><td class="date">令和2年4月</td><td>スーパーマルハチ大開店店舗改修に伴う給排水衛生設備工事</td><td>(株)タモツコーポレーション</td><td class="amount">12,840,000</td></tr>
+        <tr><td class="date">平成29年3月</td><td>スーパーマルハチ野中北店改修工事</td><td>(株)タモツ建設</td><td class="amount">23,112,000</td></tr>
+        <tr><td class="date">平成23年3月</td><td>ライフ土佐堀店新築工事</td><td>石黒建設(株)</td><td class="amount">3,507,000</td></tr>
+        <tr><td class="date">平成21年5月</td><td>ライフ三津店新築工事</td><td>(株)朝日工業社</td><td class="amount">51,345,000</td></tr>
+        <tr><td class="date">平成21年2月</td><td>ライフ天神橋店新築工事</td><td>(株)朝日工業社</td><td class="amount">81,470,000</td></tr>
+        <tr><td class="date">平成20年3月</td><td>ライフ西宮今津店新築工事</td><td>(株)朝日工業社</td><td class="amount">47,250,000</td></tr>
+        <tr><td class="date">平成18年3月</td><td>ライフ石切店新築工事</td><td>(株)朝日工業社</td><td class="amount">41,475,000</td></tr>
+        <tr><td class="date">平成17年10月</td><td>香里園駅前プロジェクト(商業棟) 新築工事</td><td>(株)朝日工業社</td><td class="amount">102,900,000</td></tr>
+        <tr><td class="date">平成8年7月</td><td>かに道楽道頓堀本店新築工事に伴う給排水衛生設備工事</td><td>山田工業(株)</td><td class="amount">23,802,000</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div id="private-factory" class="table-section" style="display:none;">
+    <div class="table-title">工場・物流倉庫新築工事</div>
+    <table class="works-table">
+      <thead><tr><th>竣工</th><th>工事名称</th><th>発注者名</th><th>請負額（円）</th></tr></thead>
+      <tbody>
+        <tr><td class="date">令和3年8月</td><td>大美屋製パン所兵庫津米飯工場新築工事</td><td>(株)タモツコーポレーション</td><td class="amount">18,770,000</td></tr>
+        <tr><td class="date">令和2年9月</td><td>鈴木合金株式会社 鶴町南地工場計画</td><td>まこと建設(株)</td><td class="amount">27,220,000</td></tr>
+        <tr><td class="date">平成29年5月</td><td>阪口製作所八尾工場立替工事 植田鉄工所第9工場</td><td>コーナン建設(株)</td><td class="amount">20,751,000</td></tr>
+        <tr><td class="date">平成28年11月</td><td>P5000G プロジェクト (建築工事)</td><td>コーナン建設(株)</td><td class="amount">24,905,000</td></tr>
+        <tr><td class="date">平成25年3月</td><td>(株)ウイングエキスプレス本社社屋新築工事</td><td>まこと建設(株)</td><td class="amount">31,479,000</td></tr>
+        <tr><td class="date">平成17年6月</td><td>トナミ運輸ワイ・ケイ物流 西淀川流通センター新築工事</td><td>(株)朝日工業社</td><td class="amount">24,150,000</td></tr>
+        <tr><td class="date">平成15年9月</td><td>グリーン物流(株)高槻センター新築工事</td><td>不二熱学工業(株)</td><td class="amount">26,040,000</td></tr>
+        <tr><td class="date">平成13年7月</td><td>SET'Sセンター新築工事</td><td>アルミ冷熱(株)</td><td class="amount">9,177,000</td></tr>
+        <tr><td class="date">平成13年1月</td><td>名糖運輸(株)近畿物流センター新築工事</td><td>日成建設(株)</td><td class="amount">4,500,000</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div id="private-pachinko" class="table-section" style="display:none;">
+    <div class="table-title">パチンコ店工事</div>
+    <table class="works-table">
+      <thead><tr><th>竣工</th><th>工事名称</th><th>発注者名</th><th>請負額（円）</th></tr></thead>
+      <tbody>
+        <tr><td class="date">令和6年7月</td><td>123大安寺店増改築工事</td><td>岡野消防設備(株)</td><td class="amount">14,176,000</td></tr>
+        <tr><td class="date">令和4年12月</td><td>123+N橿原店改装工事</td><td>岡野消防設備(株)</td><td class="amount">20,500,000</td></tr>
+        <tr><td class="date">令和4年4月</td><td>123+N布施店増改築工事</td><td>岡野消防設備(株)</td><td class="amount">31,220,000</td></tr>
+        <tr><td class="date">令和3年6月</td><td>123＋N羽曳野店改装工事</td><td>岡野消防設備(株)</td><td class="amount">12,980,000</td></tr>
+        <tr><td class="date">令和元年11月</td><td>123＋N松原店改装工事</td><td>岡野消防設備(株)</td><td class="amount">38,200,000</td></tr>
+        <tr><td class="date">平成26年12月</td><td>(仮称) 123 泉北店 新築工事</td><td>岡野消防設備(株)</td><td class="amount">22,918,000</td></tr>
+        <tr><td class="date">平成25年12月</td><td>(仮称) 123 新三田店</td><td>泉州防災(株)</td><td class="amount">18,535,000</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div id="private-hospital" class="table-section" style="display:none;">
+    <div class="table-title">病院・医院工事</div>
+    <table class="works-table">
+      <thead><tr><th>竣工</th><th>工事名称</th><th>発注者名</th><th>請負額（円）</th></tr></thead>
+      <tbody>
+        <tr><td class="date">平成29年3月</td><td>東大阪八戸ノ里整形外科 新築 空調・換気工事</td><td>(株)タモツ建設</td><td class="amount">14,040,000</td></tr>
+        <tr><td class="date">平成28年7月</td><td>(仮称)旭区清水三丁目小規模多機能居宅 介護事業所新築工事</td><td>大平建設工業(株)</td><td class="amount">14,580,000</td></tr>
+        <tr><td class="date">平成24年3月</td><td>阪神医療生活協同組合 小中島診療所新築工事</td><td>コーナン建設(株)</td><td class="amount">22,575,000</td></tr>
+        <tr><td class="date">平成23年3月</td><td>津守病院新築工事(第Ⅱ期)</td><td>大井建設(株)</td><td class="amount">26,200,000</td></tr>
+        <tr><td class="date">平成17年10月</td><td>大阪回生病院新築工事(5〜R)</td><td>(株)朝日工業社</td><td class="amount">33,075,000</td></tr>
+        <tr><td class="date">平成16年10月</td><td>清恵会三宝病院空調設備工事</td><td>(株)渡部工業所</td><td class="amount">18,942,000</td></tr>
+        <tr><td class="date">平成14年8月</td><td>新生会病院外来部門増築改装工事</td><td>まこと建設(株)</td><td class="amount">11,088,000</td></tr>
+        <tr><td class="date">平成22年4月</td><td>津守病院新築工事(第1期)</td><td>(株)大浦工務店</td><td class="amount">30,681,000</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div id="private-spa" class="table-section" style="display:none;">
+    <div class="table-title">スーパー銭湯工事</div>
+    <table class="works-table">
+      <thead><tr><th>竣工</th><th>工事名称</th><th>発注者名</th><th>請負額（円）</th></tr></thead>
+      <tbody>
+        <tr><td class="date">平成18年10月</td><td>延羽の湯新築工事</td><td>(株)ミズプラ</td><td class="amount">127,940,000</td></tr>
+        <tr><td class="date">平成16年10月</td><td>虹の湯二色浜店新築工事</td><td>(株)朝日工業社</td><td class="amount">230,639,000</td></tr>
+        <tr><td class="date">平成15年12月</td><td>極楽湯泉北豊田店新築工事</td><td>(株)朝日工業社</td><td class="amount">172,095,000</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div id="private-hotel" class="table-section" style="display:none;">
+    <div class="table-title">ホテル工事</div>
+    <table class="works-table">
+      <thead><tr><th>竣工</th><th>工事名称</th><th>発注者名</th><th>請負額（円）</th></tr></thead>
+      <tbody>
+        <tr><td class="date">令和2年7月</td><td>(仮称)鶴橋H 新築工事</td><td>コーナン建設(株)</td><td class="amount">121,840,000</td></tr>
+        <tr><td class="date">平成30年4月</td><td>浪速区恵比寿2丁目 PJ新築工事</td><td>(株)タモツコーポレーション</td><td class="amount">53,676,000</td></tr>
+        <tr><td class="date">平成29年7月</td><td>りんくうポート北ホテルプロジェクト新築工事</td><td>コーナン建設(株)</td><td class="amount">119,335,000</td></tr>
+        <tr><td class="date">平成14年6月</td><td>大阪不動恒産ビル設備工事(東横イン)</td><td>(株)東横イン開発</td><td class="amount">7,350,000</td></tr>
+        <tr><td class="date">平成13年1月</td><td>カメダビル新築工事(東横イン谷町4丁目)</td><td>(株)東横聖徳システム電建</td><td class="amount">11,760,000</td></tr>
+        <tr><td class="date">平成12年6月</td><td>東横イン梅田ビル新築工事に伴う給排水衛生設備工事</td><td>野村建設工業(株)</td><td class="amount">7,413,000</td></tr>
+        <tr><td class="date">平成12年6月</td><td>大東ビル新築工事に伴う機械設備工事 (東横イン谷町)</td><td>(株)東横聖徳システム電建</td><td class="amount">1,995,000</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div id="private-house" class="table-section" style="display:none;">
+    <div class="table-title">住宅工事</div>
+    <table class="works-table">
+      <thead><tr><th>竣工</th><th>工事名称</th><th>発注者名</th><th>請負額（円）</th></tr></thead>
+      <tbody>
+        <tr><td class="date">平成22年9月</td><td>泉ヶ丘畑中邸新築工事</td><td>大林ファシリティーズ(株)</td><td class="amount">11,344,000</td></tr>
+        <tr><td class="date">平成7年11月</td><td>竹井邸新築工事に伴う給排水衛生設備工事</td><td>日東建設(株)</td><td class="amount">7,365,000</td></tr>
+        <tr><td class="date">平成7年6月</td><td>藤本邸新築工事に伴う給排水衛生設備工事</td><td>日東建設(株)</td><td class="amount">5,665,000</td></tr>
+        <tr><td class="date">平成5年2月</td><td>北岡邸増築工事に伴う給排水衛生設備工事</td><td>野村建設工業(株)</td><td class="amount">6,695,000</td></tr>
+        <tr><td class="date">平成2年12月</td><td>津山邸新築工事に伴う給排水衛生設備工事</td><td>石黒建設(株)</td><td class="amount">15,759,000</td></tr>
+        <tr><td class="date">平成1年12月</td><td>国分邸新築に伴う給排水衛生空調設備工事</td><td>日東建設(株)</td><td class="amount">12,360,000</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div id="private-repair" class="table-section" style="display:none;">
+    <div class="table-title">改修工事（民間）</div>
+    <table class="works-table">
+      <thead><tr><th>竣工</th><th>工事名称</th><th>発注者名</th><th>請負額（円）</th></tr></thead>
+      <tbody>
+        <tr><td class="date">令和7年6月</td><td>日本美的 3階改修工事</td><td>創実ファシリティーズ(株)</td><td class="amount">4,470,000</td></tr>
+        <tr><td class="date">令和7年3月</td><td>東急マンション弁天町 C棟耐震改修工事</td><td>コーナン建設(株)</td><td class="amount">3,850,000</td></tr>
+        <tr><td class="date">令和6年11月</td><td>ライフ堺プロセスセンター エコキュート増設工事</td><td>(株)マイスターエンジニアリング</td><td class="amount">4,500,000</td></tr>
+        <tr><td class="date">令和5年11月</td><td>日成ビル 3階空調設備更新工事</td><td>日成建設(株)</td><td class="amount">6,000,000</td></tr>
+        <tr><td class="date">令和5年6月</td><td>バンドー化学（株）南海工場屋根改修に伴う空調工事</td><td>まこと建設(株)</td><td class="amount">12,000,000</td></tr>
+        <tr><td class="date">令和5年3月</td><td>日本美的村福崎杉ビル改修工事</td><td>創実ファシリティーズ(株)</td><td class="amount">142,000,000</td></tr>
+        <tr><td class="date">令和5年3月</td><td>西梅田シティクリニック移転新装工事</td><td>(株)タモツコーポレーション</td><td class="amount">42,500,000</td></tr>
+        <tr><td class="date">令和3年7月</td><td>神戸ポートピアホテル空気調和機更新工事</td><td>(株)マイスターエンジニアリング</td><td class="amount">100,000,000</td></tr>
+        <tr><td class="date">令和3年6月</td><td>特別養護老人ホーム福寿園2F共用便所排水配管工事</td><td>特別養護老人ホーム福寿園</td><td class="amount">2,350,000</td></tr>
+        <tr><td class="date">令和2年8月</td><td>枚方淀川公園スカイハイツ汚水・雑排水配管更新工事</td><td>エジコピーディー(株)</td><td class="amount">40,000,000</td></tr>
+        <tr><td class="date">平成30年11月</td><td>(仮称)ポートアイランド老健ムーチョ改修工事</td><td>(株)タモツコーポレーション</td><td class="amount">73,660,000</td></tr>
+        <tr><td class="date">平成20年3月</td><td>甲子園球場リニューアル工事H19</td><td>(株)朝日工業社</td><td class="amount">15,172,000</td></tr>
+        <tr><td class="date">平成19年5月</td><td>AMB尼崎DCⅡ新築工事</td><td>(株)朝日工業社</td><td class="amount">20,580,000</td></tr>
+        <tr><td class="date">平成17年5月</td><td>新大阪センイシティ改修工事</td><td>大阪日立冷熱(株)</td><td class="amount">21,000,000</td></tr>
+        <tr><td class="date">平成17年5月</td><td>貿易ビル空調改修工事</td><td>日成建設(株)</td><td class="amount">5,400,000</td></tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 
-<!-- ESCO事業 -->
+<!-- ======== ESCO事業 ======== -->
 <div id="tab-esco" class="tab-content">
   <div class="table-section">
-    <div class="table-title">ESCO事業について</div>
-    <div class="esco-cards">
+    <div class="esco-cards" style="margin-bottom:40px;">
       <div class="esco-card">
         <h3>🌿 ESCO事業とは</h3>
-        <p>Energy Service Company（エネルギーサービス会社）事業の略称です。省エネルギー改修工事の費用を、改修後のエネルギーコスト削減分で賄うビジネスモデルです。</p>
+        <p>Energy Service Company事業の略。省エネ改修工事の費用を、改修後のエネルギーコスト削減分で賄うビジネスモデルです。旅館・ホテル・温泉施設など幅広い施設に実績があります。</p>
       </div>
       <div class="esco-card">
-        <h3>💡 不二設備工業所のESCO対応</h3>
-        <p>空調設備・給排水設備の省エネ改修を通じて、お客様のランニングコスト削減とCO₂排出削減に貢献しています。病院・公共施設・オフィスビルなど幅広い施設に対応。</p>
+        <h3>💡 不二設備工業所の強み</h3>
+        <p>高効率機器導入によるCO₂削減事業を中心に、省エネ設備改修の豊富な実績があります。現地調査から提案・施工・管理まで一貫してサポートします。</p>
       </div>
-      <div class="esco-card">
-        <h3>📊 主な実績</h3>
-        <div class="esco-point">
-          <div class="esco-point-num">01</div>
-          <p>病院施設の空調設備省エネ改修工事（エネルギー使用量大幅削減）</p>
-        </div>
-        <div class="esco-point">
-          <div class="esco-point-num">02</div>
-          <p>公共施設の給排水設備改修によるランニングコスト削減</p>
-        </div>
-        <div class="esco-point">
-          <div class="esco-point-num">03</div>
-          <p>大型施設の熱源設備更新・高効率機器への切替工事</p>
-        </div>
-      </div>
-      <div class="esco-card">
-        <h3>📞 ご相談</h3>
-        <p>省エネ改修に関するご相談は、お気軽にお問い合わせください。現地調査から提案・施工・管理まで一貫してサポートします。</p>
-        <br>
-        <a href="contact.html" style="color:var(--blue);font-weight:700;font-size:14px;">お問い合わせはこちら →</a>
-      </div>
+    </div>
+    <div class="table-title">ESCO事業 施工実績</div>
+    <table class="works-table">
+      <thead><tr><th>竣工</th><th>工事名称</th><th>発注者名</th><th>請負額（円）</th></tr></thead>
+      <tbody>
+        <tr><td class="date">令和元年12月</td><td>旅荘 海の蝶における高効率機器導入によるCO2削減事業</td><td>(株)スマート・リソース</td><td class="amount">82,980,000</td></tr>
+        <tr><td class="date">平成30年12月</td><td>翠泉における省エネルギー事業</td><td>(株)スマート・リソース</td><td class="amount">16,400,000</td></tr>
+        <tr><td class="date">平成30年10月</td><td>碧水御苑における省エネルギー事業</td><td>(株)スマート・リソース</td><td class="amount">19,350,000</td></tr>
+        <tr><td class="date">平成30年9月</td><td>不死王閣における省エネルギー事業</td><td>(株)スマート・リソース</td><td class="amount">4,000,000</td></tr>
+        <tr><td class="date">平成29年12月</td><td>ホテル若水における省エネルギー事業</td><td>(株)スマート・リソース</td><td class="amount">64,260,000</td></tr>
+        <tr><td class="date">平成29年1月</td><td>不死王閣における省エネルギー事業</td><td>(株)スマート・リソース</td><td class="amount">20,070,000</td></tr>
+        <tr><td class="date">平成28年9月</td><td>曽爾高原温泉お亀の湯における省エネルギー事業</td><td>NECキャピタルソリューション(株)</td><td class="amount">38,340,000</td></tr>
+        <tr><td class="date">平成28年2月</td><td>志津川五和の園における省エネルギー事業</td><td>(株)スマート・リソース</td><td class="amount">11,716,000</td></tr>
+        <tr><td class="date">平成28年1月</td><td>ホテルシーガル天保山における省エネルギー事業</td><td>(株)スマート・リソース</td><td class="amount">58,320,000</td></tr>
+        <tr><td class="date">平成27年12月</td><td>魚庵さゝ家における省エネルギー事業</td><td>(株)スマート・リソース</td><td class="amount">16,308,000</td></tr>
+        <tr><td class="date">平成27年7月</td><td>ホテルセイリュウにおける省エネルギー事業</td><td>(株)スマート・リソース</td><td class="amount">55,566,000</td></tr>
+      </tbody>
+    </table>
+    <div style="text-align:center;margin-top:32px;">
+      <a href="contact.html" style="display:inline-block;background:var(--blue);color:white;padding:14px 36px;border-radius:2px;font-weight:700;font-size:14px;text-decoration:none;">省エネ改修のご相談はこちら →</a>
     </div>
   </div>
 </div>
@@ -340,39 +573,14 @@ footer{background:var(--blue-deeper);color:white;padding:48px 80px 24px;margin-t
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
-      <div class="footer-logo">
-        <img src="assets/logo.png" alt="ロゴ">
-        <span>株式会社 不二設備工業所</span>
-      </div>
+      <div class="footer-logo"><img src="assets/logo.png" alt="ロゴ"><span>株式会社 不二設備工業所</span></div>
       <p>〒531-0076 大阪市北区大淀中3丁目6番7号<br>TEL：06-6458-6341　FAX：06-6458-6344<br>創業：昭和42年（1967年）</p>
     </div>
-    <div class="footer-nav">
-      <h4>COMPANY</h4>
-      <ul>
-        <li><a href="company.html">会社概要</a></li>
-        <li><a href="company.html#quality">品質方針</a></li>
-        <li><a href="company.html#history">会社沿革</a></li>
-      </ul>
-    </div>
-    <div class="footer-nav">
-      <h4>SERVICES</h4>
-      <ul>
-        <li><a href="services.html">事業内容</a></li>
-        <li><a href="achievements.html">施工実績</a></li>
-      </ul>
-    </div>
-    <div class="footer-nav">
-      <h4>OTHER</h4>
-      <ul>
-        <li><a href="recruit.html">採用情報</a></li>
-        <li><a href="contact.html">お問い合わせ</a></li>
-      </ul>
-    </div>
+    <div class="footer-nav"><h4>COMPANY</h4><ul><li><a href="company.html">会社概要</a></li><li><a href="company.html#quality">品質方針</a></li><li><a href="company.html#history">会社沿革</a></li></ul></div>
+    <div class="footer-nav"><h4>SERVICES</h4><ul><li><a href="services.html">事業内容</a></li><li><a href="achievements.html">施工実績</a></li></ul></div>
+    <div class="footer-nav"><h4>OTHER</h4><ul><li><a href="recruit.html">採用情報</a></li><li><a href="contact.html">お問い合わせ</a></li></ul></div>
   </div>
-  <div class="footer-bottom">
-    <span>© 2025 株式会社 不二設備工業所 All Rights Reserved.</span>
-    <span>Osaka, Japan / Est. 1967</span>
-  </div>
+  <div class="footer-bottom"><span>© 2025 株式会社 不二設備工業所 All Rights Reserved.</span><span>Osaka, Japan / Est. 1967</span></div>
 </footer>
 
 <script>
@@ -388,8 +596,10 @@ function showSub(tab, sub) {
   const tabEl = document.getElementById('tab-' + tab);
   tabEl.querySelectorAll('.table-section').forEach(el => el.style.display = 'none');
   tabEl.querySelectorAll('.sub-btn').forEach(el => el.classList.remove('active'));
-  document.getElementById(tab + '-' + sub).style.display = 'block';
+  const target = document.getElementById(tab + '-' + sub);
+  if(target) target.style.display = 'block';
   event.target.classList.add('active');
+  window.scrollTo({top: 280, behavior: 'smooth'});
 }
 </script>
 </body>
