@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="株式会社不二設備工業所の採用情報。キャリア採用・新卒採用・事務職募集。大阪で安定して働きたい方を歓迎します。">
+<title>採用情報 | 株式会社 不二設備工業所</title>
+<link rel="icon" href="assets/favicon_48x48.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#017DFF;--blue-dark:#005FCC;--blue-deeper:#003F8A;--blue-light:#E8F2FF;--blue-mid:#1A5FAA;--white:#FFF;--off-white:#F7FAFF;--gray:#666;--text:#1A2A3A;--border:#D0E4F7;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Noto Sans JP',sans-serif;background:var(--white);color:var(--text);}
+header{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--white);border-bottom:1px solid var(--border);box-shadow:0 2px 12px rgba(1,125,255,0.08);}
+.header-top{display:flex;align-items:center;justify-content:center;padding:10px 40px;border-bottom:1px solid var(--border);}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.logo img{height:44px;}
+.logo-text{font-family:'Noto Serif JP',serif;font-size:19px;font-weight:700;color:var(--text);letter-spacing:.05em;}
+.logo-text span{font-size:12px;font-weight:400;margin-right:6px;color:var(--gray);}
+nav{display:flex;align-items:center;justify-content:center;background:var(--blue);}
+.nav-item{position:relative;display:flex;align-items:center;gap:6px;padding:13px 22px;color:rgba(255,255,255,.9);text-decoration:none;font-size:13px;letter-spacing:.05em;transition:background .2s;white-space:nowrap;}
+.nav-item:hover,.nav-item.active{background:var(--blue-dark);}
+.nav-icon{width:18px;height:18px;filter:brightness(0) invert(1);opacity:.85;}
+.nav-dropdown{position:absolute;top:100%;left:0;background:var(--white);min-width:160px;border:1px solid var(--border);box-shadow:0 8px 24px rgba(0,0,0,.1);display:none;z-index:200;}
+.nav-item:hover .nav-dropdown{display:block;}
+.nav-dropdown a{display:block;padding:10px 16px;font-size:13px;color:var(--text);text-decoration:none;border-bottom:1px solid var(--border);}
+.nav-dropdown a:last-child{border-bottom:none;}
+.nav-dropdown a:hover{background:var(--blue-light);color:var(--blue);}
+
+.page-hero{margin-top:113px;background:linear-gradient(135deg,var(--blue-deeper),var(--blue-mid),var(--blue));padding:56px 80px;text-align:center;position:relative;overflow:hidden;}
+.page-hero::before{content:'';position:absolute;inset:0;background:url('assets/recruit-photo.jpg') center/cover;opacity:.15;}
+.page-hero h1{font-family:'Noto Serif JP',serif;font-size:34px;font-weight:700;color:white;letter-spacing:.1em;margin-bottom:8px;position:relative;}
+.page-hero p{font-size:13px;color:rgba(255,255,255,.55);letter-spacing:.2em;font-family:'DM Mono',monospace;position:relative;}
+
+/* タブ */
+.tab-nav{background:var(--off-white);border-bottom:1px solid var(--border);display:flex;justify-content:center;}
+.tab-nav a{padding:14px 32px;font-size:14px;text-decoration:none;color:var(--gray);border-bottom:3px solid transparent;transition:all .2s;}
+.tab-nav a.active{color:var(--blue);font-weight:700;border-bottom-color:var(--blue);}
+.tab-content{display:none;}
+.tab-content.active{display:block;}
+
+.recruit-wrap{max-width:960px;margin:0 auto;padding:56px 40px;}
+.sec-label{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.2em;color:var(--blue);margin-bottom:10px;display:flex;align-items:center;gap:12px;}
+.sec-label::after{content:'';height:1px;width:36px;background:var(--blue);}
+.sec-title{font-family:'Noto Serif JP',serif;font-size:26px;font-weight:700;margin-bottom:28px;padding-bottom:12px;border-bottom:2px solid var(--blue);}
+
+.message-block{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-bottom:56px;}
+.message-img{height:340px;background:url('assets/recruit-photo.jpg') center/cover;border-radius:4px;}
+.message-text h2{font-family:'Noto Serif JP',serif;font-size:26px;font-weight:700;color:var(--text);margin-bottom:18px;line-height:1.5;}
+.message-text p{font-size:14px;color:var(--gray);line-height:2.1;}
+
+.points-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:48px;}
+.point-card{background:var(--off-white);border:1px solid var(--border);border-top:3px solid var(--blue);border-radius:4px;padding:24px 20px;text-align:center;}
+.point-num{font-family:'DM Mono',monospace;font-size:28px;color:var(--blue);font-weight:700;margin-bottom:10px;}
+.point-title{font-size:15px;font-weight:700;margin-bottom:10px;}
+.point-text{font-size:13px;color:var(--gray);line-height:1.8;}
+
+.job-table{width:100%;border-collapse:collapse;margin-bottom:40px;}
+.job-table tr{border-bottom:1px solid var(--border);}
+.job-table tr:first-child{border-top:1px solid var(--border);}
+.job-table th{width:150px;padding:14px 18px;background:var(--blue-light);font-size:13px;font-weight:700;color:var(--blue-mid);text-align:left;vertical-align:top;}
+.job-table td{padding:14px 20px;font-size:14px;line-height:1.9;color:var(--text);}
+
+.line-cta{background:var(--blue);border-radius:8px;padding:32px;display:flex;align-items:center;gap:24px;margin-bottom:24px;}
+.line-icon{font-size:48px;flex-shrink:0;}
+.line-text h3{font-family:'Noto Serif JP',serif;font-size:20px;color:white;margin-bottom:8px;}
+.line-text p{font-size:13px;color:rgba(255,255,255,.7);margin-bottom:16px;}
+.btn-line{display:inline-block;background:#00B900;color:white;padding:12px 28px;border-radius:4px;font-size:14px;font-weight:700;text-decoration:none;transition:opacity .2s;}
+.btn-line:hover{opacity:.85;}
+.btn-special{display:inline-block;background:white;color:var(--blue);padding:12px 28px;border-radius:4px;font-size:14px;font-weight:700;text-decoration:none;margin-left:12px;transition:opacity .2s;}
+.btn-special:hover{opacity:.85;}
+
+.img-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:40px;}
+.img-grid img{width:100%;height:220px;object-fit:cover;border-radius:4px;}
+
+footer{background:var(--blue-deeper);color:white;padding:48px 80px 24px;}
+.footer-inner{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px;}
+.footer-logo{display:flex;align-items:center;gap:10px;margin-bottom:12px;}
+.footer-logo img{height:36px;}
+.footer-logo span{font-family:'Noto Serif JP',serif;font-size:16px;font-weight:700;}
+.footer-brand p{font-size:13px;color:rgba(255,255,255,.4);line-height:1.9;}
+.footer-nav h4{font-size:11px;letter-spacing:.15em;color:rgba(255,255,255,.35);margin-bottom:16px;font-family:'DM Mono',monospace;}
+.footer-nav ul{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.footer-nav a{font-size:13px;color:rgba(255,255,255,.55);text-decoration:none;}
+.footer-nav a:hover{color:white;}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:20px;display:flex;justify-content:space-between;font-size:12px;color:rgba(255,255,255,.3);font-family:'DM Mono',monospace;}
+
+@media(max-width:768px){
+  .header-top{padding:8px 16px;}
+  nav{overflow-x:auto;justify-content:flex-start;}
+  .nav-item{padding:11px 14px;font-size:12px;}
+  .page-hero{padding:40px 20px;margin-top:100px;}
+  .tab-nav{overflow-x:auto;}
+  .tab-nav a{padding:12px 16px;white-space:nowrap;}
+  .recruit-wrap{padding:40px 20px;}
+  .message-block{grid-template-columns:1fr;}
+  .message-img{height:220px;}
+  .points-grid{grid-template-columns:1fr;}
+  .line-cta{flex-direction:column;text-align:center;padding:24px 20px;}
+  .img-grid{grid-template-columns:1fr;}
+  footer{padding:40px 20px 20px;}
+  .footer-inner{grid-template-columns:1fr 1fr;gap:24px;}
+  .footer-bottom{flex-direction:column;gap:8px;}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-top">
+    <a href="index.html" class="logo">
+      <img src="assets/logo.png" alt="株式会社不二設備工業所">
+      <div class="logo-text"><span>株式会社</span>不二設備工業所</div>
+    </a>
+  </div>
+  <nav>
+    <a href="index.html" class="nav-item"><img class="nav-icon" src="assets/building-_1_.svg" alt="">ホーム</a>
+    <a href="company.html" class="nav-item">
+      <img class="nav-icon" src="assets/building (2).svg" alt="">会社情報
+      <div class="nav-dropdown">
+        <a href="company.html">会社概要</a>
+        <a href="company.html#quality">品質方針</a>
+        <a href="company.html#history">会社沿革</a>
+      </div>
+    </a>
+    <a href="services.html" class="nav-item"><img class="nav-icon" src="assets/iconmonstr-wrench-10.svg" alt="">事業内容</a>
+    <a href="achievements.html" class="nav-item">
+      <img class="nav-icon" src="assets/folder.svg" alt="">施工実績
+      <div class="nav-dropdown">
+        <a href="achievements.html">公共工事</a>
+        <a href="achievements.html">民間工事</a>
+        <a href="achievements.html">ESCO事業</a>
+      </div>
+    </a>
+    <a href="recruit.html" class="nav-item active"><img class="nav-icon" src="assets/group (1).svg" alt="">採用情報</a>
+    <a href="contact.html" class="nav-item"><img class="nav-icon" src="assets/phone-ringing.svg" alt="">お問い合わせ</a>
+  </nav>
+</header>
+
+<div class="page-hero">
+  <h1>採用情報</h1>
+  <p>RECRUIT</p>
+</div>
+
+<div class="tab-nav">
+  <a href="#" id="tab-career-btn" class="active" onclick="showTab('career');return false;">キャリア採用</a>
+  <a href="#" id="tab-newgrad-btn" onclick="showTab('newgrad');return false;">新卒採用</a>
+  <a href="#" id="tab-office-btn" onclick="showTab('office');return false;">事務職募集</a>
+</div>
+
+<!-- キャリア採用 -->
+<div id="tab-career" class="tab-content active">
+  <div class="recruit-wrap">
+    <div class="message-block">
+      <div class="message-img"></div>
+      <div>
+        <div class="sec-label">CAREER</div>
+        <div class="message-text">
+          <h2>経験者の方、<br>ぜひ力を貸してください。</h2>
+          <p>不二設備工業所は昭和42年の創業以来、大阪の街の「見えない部分」を支え続けてきました。管工事のプロとして、確かな技術と実績を持つ方を歓迎します。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sec-title">キャリア採用 募集要項</div>
+    <table class="job-table">
+      <tr><th>募集職種</th><td>建設工事の機械設備（給排水衛生設備工事・空調換気設備工事・消火設備工事）の施工管理・施工図作成</td></tr>
+      <tr><th>応募資格</th><td>要普通免許 / 施工管理の経験者</td></tr>
+      <tr><th>入社時期</th><td>ご相談に応じます</td></tr>
+      <tr><th>勤務地</th><td>〒531-0076 大阪市北区大淀中3丁目6番7号<br>（JR環状線 福島駅 徒歩10分 / JR大阪駅 徒歩15分）</td></tr>
+      <tr><th>勤務時間</th><td>8:30〜17:30（残業あり）</td></tr>
+      <tr><th>給与</th><td>月給25万円〜40万円（経験を考慮し優遇）</td></tr>
+      <tr><th>待遇・福利厚生</th><td>昇給年1回 / 賞与年2回 / 交通費全額支給<br>各種社会保険完備 / 有給休暇 / エクシブ利用可</td></tr>
+      <tr><th>休日</th><td>日曜・GW・夏期・年末年始</td></tr>
+      <tr><th>連絡先</th><td>人事担当：水田　TEL 06-6458-6341</td></tr>
+    </table>
+
+    <div class="line-cta">
+      <div class="line-icon">💬</div>
+      <div class="line-text">
+        <h3>まずは公式LINEからお気軽に！</h3>
+        <p>採用に関するご質問・ご応募はLINEでもOKです。お気軽にどうぞ♪</p>
+        <a href="https://lin.ee/FWnn2S1" class="btn-line" target="_blank">LINEで友だち追加</a>
+        <a href="https://fujisetsubikogyosyo.jbplt.jp/" class="btn-special" target="_blank">採用特設サイト</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 新卒採用 -->
+<div id="tab-newgrad" class="tab-content">
+  <div class="recruit-wrap">
+    <div class="sec-label">NEW GRADUATE</div>
+    <div class="sec-title">令和7年度 新卒者募集</div>
+
+    <div class="points-grid">
+      <div class="point-card">
+        <div class="point-num">01</div>
+        <div class="point-title">手に職をつける</div>
+        <p class="point-text">設備工事のプロとして確かな技術を習得。1級管工事施工管理技士など国家資格の取得を目指せます。</p>
+      </div>
+      <div class="point-card">
+        <div class="point-num">02</div>
+        <div class="point-title">安定した仕事環境</div>
+        <p class="point-text">建物がある限り設備工事の需要はなくなりません。大手建設会社との安定した取引基盤があります。</p>
+      </div>
+      <div class="point-card">
+        <div class="point-num">03</div>
+        <div class="point-title">チームで支え合う</div>
+        <p class="point-text">少人数で風通しのよい職場です。困ったときは先輩スタッフが丁寧にサポートします。</p>
+      </div>
+    </div>
+
+    <div class="img-grid">
+      <img src="assets/service-photo1.png" alt="現場の様子">
+      <img src="assets/service-photo2.png" alt="チームの様子">
+    </div>
+
+    <div class="line-cta">
+      <div class="line-icon">💬</div>
+      <div class="line-text">
+        <h3>採用に関するお問い合わせは公式LINEから♪</h3>
+        <p>新卒採用のご質問・ご応募もLINEでOKです。お気軽にどうぞ！</p>
+        <a href="https://lin.ee/FWnn2S1" class="btn-line" target="_blank">LINEで友だち追加</a>
+        <a href="https://fujisetsubikogyosyo.jbplt.jp/" class="btn-special" target="_blank">採用特設サイト</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 事務職募集 -->
+<div id="tab-office" class="tab-content">
+  <div class="recruit-wrap">
+    <div class="sec-label">OFFICE STAFF</div>
+    <div class="sec-title">一般事務スタッフ（正社員）募集</div>
+
+    <p style="font-size:14px;color:var(--gray);line-height:2;margin-bottom:32px;">
+      電話対応・来客対応、社内専用ソフトへの入力作業、積算業務など、建築設備工事会社の事務業務をお任せします。入社後は担当の先輩社員がマンツーマンで丁寧に指導しますので、事務がはじめての方もご安心ください◎
+    </p>
+
+    <div class="sec-title" style="font-size:20px;">募集要項</div>
+    <table class="job-table">
+      <tr><th>業務内容</th><td>電話対応・来客対応 / 社内専用ソフトへの入力作業 / 積算業務 / その他一般事務</td></tr>
+      <tr><th>応募資格</th><td>未経験OK・学歴不問<br>Word/Excelの基本操作ができる方<br>明るく丁寧な対応ができる方歓迎</td></tr>
+      <tr><th>使用ツール</th><td>Excel・Word・社内入力システム・iPad</td></tr>
+      <tr><th>勤務地</th><td>〒531-0076 大阪市北区大淀中3丁目6番7号<br>（JR環状線 福島駅 徒歩10分）</td></tr>
+      <tr><th>残業</th><td>月1回の会議（1〜2時間）程度。基本的に定時退社</td></tr>
+      <tr><th>交通費</th><td>月1万円を目安に支給（上限あり・ご相談可）</td></tr>
+      <tr><th>待遇・福利厚生</th><td>社会保険完備 / 養老保険・入院一時金制度あり<br>福利厚生：エクシブ利用可 / 髪色・服装・ネイル自由（過度でなければ）</td></tr>
+      <tr><th>職場環境</th><td>竣工10年未満の清潔な社屋 / 男女別トイレ / 空調完備 / 休憩スペースあり / WiFi完備</td></tr>
+    </table>
+
+    <div class="line-cta">
+      <div class="line-icon">💬</div>
+      <div class="line-text">
+        <h3>事務職のご応募もLINEからどうぞ♪</h3>
+        <p>採用に関するご質問・ご応募はLINEでOKです。お気軽に！</p>
+        <a href="https://lin.ee/FWnn2S1" class="btn-line" target="_blank">LINEで友だち追加</a>
+        <a href="https://fujisetsubikogyosyo.jbplt.jp/" class="btn-special" target="_blank">採用特設サイト</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo"><img src="assets/logo.png" alt="ロゴ"><span>株式会社 不二設備工業所</span></div>
+      <p>〒531-0076 大阪市北区大淀中3丁目6番7号<br>TEL：06-6458-6341　FAX：06-6458-6344<br>創業：昭和42年（1967年）</p>
+    </div>
+    <div class="footer-nav"><h4>COMPANY</h4><ul><li><a href="company.html">会社概要</a></li><li><a href="company.html#quality">品質方針</a></li><li><a href="company.html#history">会社沿革</a></li></ul></div>
+    <div class="footer-nav"><h4>SERVICES</h4><ul><li><a href="services.html">事業内容</a></li><li><a href="achievements.html">施工実績</a></li></ul></div>
+    <div class="footer-nav"><h4>OTHER</h4><ul><li><a href="recruit.html">採用情報</a></li><li><a href="contact.html">お問い合わせ</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2025 株式会社 不二設備工業所 All Rights Reserved.</span><span>Osaka, Japan / Est. 1967</span></div>
+</footer>
+
+<script>
+function showTab(name) {
+  document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.tab-nav a').forEach(el => el.classList.remove('active'));
+  document.getElementById('tab-' + name).classList.add('active');
+  document.getElementById('tab-' + name + '-btn').classList.add('active');
+  window.scrollTo({top: 200, behavior: 'smooth'});
+}
+</script>
+</body>
+</html>
