@@ -74,7 +74,7 @@ nav {
 .nav-item {
   position: relative;
   display: flex; align-items: center; gap: 6px;
-  padding: 14px 24px;
+  padding: 13px 22px;
   color: rgba(255,255,255,0.9);
   text-decoration: none;
   font-size: 13px; letter-spacing: 0.05em;
@@ -396,6 +396,9 @@ main { min-height: 60vh; }
 }
 
 /* ===== FOOTER ===== */
+.footer-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+.footer-logo img { height: 44px; width: auto; }
+.footer-logo span { font-family: 'Noto Serif JP', serif; font-size: 16px; font-weight: 700; }
 footer {
   background: var(--blue-deeper);
   color: white;
@@ -458,9 +461,9 @@ footer {
     <a href="company.html" class="nav-item active">
       <img class="nav-icon" src="assets/building (2).svg" alt="">会社情報
       <div class="nav-dropdown">
-        <a href="#profile" class="active" onclick="showTab('profile')">会社概要</a>
-        <a href="#quality" onclick="showTab('quality')">品質方針</a>
-        <a href="#history" onclick="showTab('history')">会社沿革</a>
+        <a href="company.html#profile">会社概要</a>
+        <a href="company.html#quality">品質方針</a>
+        <a href="company.html#history">会社沿革</a>
       </div>
     </a>
     <a href="services.html" class="nav-item"><img class="nav-icon" src="assets/iconmonstr-wrench-10.svg" alt="">事業内容</a>
@@ -826,10 +829,12 @@ footer {
     <div class="footer-brand">
       <div class="footer-logo">
         <img src="assets/logo.png" alt="ロゴ" style="height:44px;width:auto;">
-        <span>株式会社 不二設備工業所</span>
+        <div>
+          <div style="font-family:'Noto Serif JP',serif;font-size:16px;font-weight:700;color:white;">株式会社 不二設備工業所</div>
+          <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.15em;color:rgba(255,255,255,0.45);margin-top:3px;">FUJI SETSUBI KOGYOSHO &nbsp;/&nbsp; Est. 1967</div>
+        </div>
       </div>
-      <div style="font-size:11px;color:rgba(255,255,255,0.3);letter-spacing:0.15em;font-family:'DM Mono',monospace;margin-bottom:12px;">FUJI SETSUBI KOGYOSHO / Est. 1967</div>
-      <p>〒531-0076 大阪市北区大淀中3丁目6番7号<br>TEL：06-6458-6341　FAX：06-6458-6344</p>
+      <p style="margin-top:14px;">〒531-0076 大阪市北区大淀中3丁目6番7号<br>TEL：06-6458-6341　FAX：06-6458-6344<br>創業：昭和42年（1967年）</p>
     </div>
     <div class="footer-nav">
       <h4>COMPANY</h4>

@@ -59,7 +59,7 @@ nav{display:flex;align-items:center;justify-content:center;background:var(--blue
 footer{background:var(--blue-deeper);color:white;padding:48px 80px 24px;margin-top:40px;}
 .footer-inner{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px;}
 .footer-logo{display:flex;align-items:center;gap:10px;margin-bottom:12px;}
-.footer-logo img{height:36px;}
+.footer-logo img{height:44px;width:auto;}
 .footer-logo span{font-family:'Noto Serif JP',serif;font-size:16px;font-weight:700;}
 .footer-brand p{font-size:13px;color:rgba(255,255,255,.4);line-height:1.9;}
 .footer-nav h4{font-size:11px;letter-spacing:.15em;color:rgba(255,255,255,.35);margin-bottom:16px;font-family:'DM Mono',monospace;}
@@ -86,7 +86,7 @@ footer{background:var(--blue-deeper);color:white;padding:48px 80px 24px;margin-t
 <header>
   <div class="header-top">
     <a href="index.html" class="logo">
-      <img src="assets/logo.png" alt="株式会社不二設備工業所">
+      <img src="assets/logo.png" alt="株式会社不二設備工業所" style="height:44px;width:auto;">
       <div class="logo-text">
         <span>株式会社</span>不二設備工業所
         <div style="font-family:'DM Mono',monospace;font-size:9px;font-weight:400;letter-spacing:0.12em;color:#aaa;margin-top:2px;">FUJI SETSUBI KOGYOSHO &nbsp;/&nbsp; Est. 1967</div>
@@ -94,22 +94,26 @@ footer{background:var(--blue-deeper);color:white;padding:48px 80px 24px;margin-t
     </a>
   </div>
   <nav>
-    <a href="index.html" class="nav-item"><img class="nav-icon" src="assets/building-_1_.svg" alt="">ホーム</a>
+    <a href="index.html" class="nav-item">
+      <img class="nav-icon" src="assets/building-_1_.svg" alt="">ホーム
+    </a>
     <a href="company.html" class="nav-item">
       <img class="nav-icon" src="assets/building (2).svg" alt="">会社情報
       <div class="nav-dropdown">
-        <a href="company.html">会社概要</a>
+        <a href="company.html#profile">会社概要</a>
         <a href="company.html#quality">品質方針</a>
         <a href="company.html#history">会社沿革</a>
       </div>
     </a>
-    <a href="services.html" class="nav-item active"><img class="nav-icon" src="assets/iconmonstr-wrench-10.svg" alt="">事業内容</a>
+    <a href="services.html" class="nav-item active">
+      <img class="nav-icon" src="assets/iconmonstr-wrench-10.svg" alt="">事業内容
+    </a>
     <a href="achievements.html" class="nav-item">
       <img class="nav-icon" src="assets/folder.svg" alt="">施工実績
       <div class="nav-dropdown">
-        <a href="achievements.html">公共工事</a>
-        <a href="achievements.html">民間工事</a>
-        <a href="achievements.html">ESCO事業</a>
+        <a href="achievements.html#public">公共工事</a>
+        <a href="achievements.html#private">民間工事</a>
+        <a href="achievements.html#esco">ESCO事業</a>
       </div>
     </a>
     <a href="recruit.html" class="nav-item"><img class="nav-icon" src="assets/group (1).svg" alt="">採用情報</a>
@@ -209,10 +213,13 @@ footer{background:var(--blue-deeper);color:white;padding:48px 80px 24px;margin-t
   <div class="footer-inner">
     <div class="footer-brand">
       <div class="footer-logo">
-        <img src="assets/logo.png" alt="ロゴ">
-        <span>株式会社 不二設備工業所</span>
+        <img src="assets/logo.png" alt="ロゴ" style="height:44px;width:auto;">
+        <div>
+          <div style="font-family:'Noto Serif JP',serif;font-size:16px;font-weight:700;color:white;">株式会社 不二設備工業所</div>
+          <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.15em;color:rgba(255,255,255,0.45);margin-top:3px;">FUJI SETSUBI KOGYOSHO &nbsp;/&nbsp; Est. 1967</div>
+        </div>
       </div>
-      <p>〒531-0076 大阪市北区大淀中3丁目6番7号<br>TEL：06-6458-6341　FAX：06-6458-6344<br>創業：昭和42年（1967年）</p>
+      <p style="margin-top:14px;">〒531-0076 大阪市北区大淀中3丁目6番7号<br>TEL：06-6458-6341　FAX：06-6458-6344<br>創業：昭和42年（1967年）</p>
     </div>
     <div class="footer-nav"><h4>COMPANY</h4><ul><li><a href="company.html">会社概要</a></li><li><a href="company.html#quality">品質方針</a></li><li><a href="company.html#history">会社沿革</a></li></ul></div>
     <div class="footer-nav"><h4>SERVICES</h4><ul><li><a href="services.html">事業内容</a></li><li><a href="achievements.html">施工実績</a></li></ul></div>
