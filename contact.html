@@ -12,13 +12,13 @@
 :root{--blue:#017DFF;--blue-dark:#005FCC;--blue-deeper:#003F8A;--blue-light:#E8F2FF;--blue-mid:#1A5FAA;--white:#FFF;--off-white:#F7FAFF;--gray:#666;--text:#1A2A3A;--border:#D0E4F7;}
 *{box-sizing:border-box;margin:0;padding:0;}
 body{font-family:'Noto Sans JP',sans-serif;background:var(--white);color:var(--text);}
-header{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--white);border-bottom:1px solid var(--border);box-shadow:0 2px 12px rgba(1,125,255,0.08);}
-.header-top{display:flex;align-items:center;justify-content:center;padding:10px 40px;border-bottom:1px solid var(--border);}
+header{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--white);border-bottom:1px solid var(--border);box-shadow:0 2px 12px rgba(1,125,255,0.08);min-height:113px;}
+.header-top{display:flex;align-items:center;justify-content:center;height:72px;padding:10px 40px;border-bottom:1px solid var(--border);}
 .logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
 .logo img{height:44px;}
 .logo-text{font-family:'Noto Serif JP',serif;font-size:19px;font-weight:700;color:var(--text);letter-spacing:.05em;}
 .logo-text span{font-size:12px;font-weight:400;margin-right:6px;color:var(--gray);}
-nav{display:flex;align-items:center;justify-content:center;background:var(--blue);}
+nav{display:flex;align-items:center;justify-content:center;background:var(--blue);min-height:46px;}
 .nav-item{position:relative;display:flex;align-items:center;gap:6px;padding:13px 22px;color:rgba(255,255,255,.9);text-decoration:none;font-size:13px;letter-spacing:.05em;transition:background .2s;white-space:nowrap;}
 .nav-item:hover,.nav-item.active{background:var(--blue-dark);}
 .nav-icon{width:18px;height:18px;filter:brightness(0) invert(1);opacity:.85;}
@@ -220,7 +220,7 @@ footer{background:var(--blue-deeper);color:white;padding:48px 80px 24px;}
     <div class="footer-nav"><h4>SERVICES</h4><ul><li><a href="services.html">事業内容</a></li><li><a href="achievements.html">施工実績</a></li></ul></div>
     <div class="footer-nav"><h4>OTHER</h4><ul><li><a href="recruit.html">採用情報</a></li><li><a href="contact.html">お問い合わせ</a></li></ul></div>
   </div>
-  <div class="footer-bottom"><span>© 2025 株式会社 不二設備工業所 All Rights Reserved.</span><span>Osaka, Japan / Est. 1967</span></div>
+  <div class="footer-bottom"><span>© 2025 株式会社 不二設備工業所 All Rights Reserved.</span><span style="font-family:'DM Mono',monospace;letter-spacing:0.12em;font-size:11px;">FUJI SETSUBI KOGYOSHO &nbsp;/&nbsp; Est. 1967</span></div>
 </footer>
 </body>
 </html>

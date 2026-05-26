@@ -21,13 +21,13 @@ html{scroll-behavior:smooth;}
 body{font-family:'Noto Sans JP',sans-serif;background:var(--white);color:var(--text);overflow-x:hidden;}
 
 /* HEADER */
-header{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--white);border-bottom:1px solid var(--border);box-shadow:0 2px 12px rgba(1,125,255,0.08);}
-.header-top{display:flex;align-items:center;justify-content:center;padding:10px 40px;border-bottom:1px solid var(--border);}
+header{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--white);border-bottom:1px solid var(--border);box-shadow:0 2px 12px rgba(1,125,255,0.08);min-height:113px;}
+.header-top{display:flex;align-items:center;justify-content:center;height:72px;padding:10px 40px;border-bottom:1px solid var(--border);}
 .logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
 .logo img{height:44px;width:auto;}
 .logo-text{font-family:'Noto Serif JP',serif;font-size:19px;font-weight:700;color:var(--text);letter-spacing:0.05em;}
 .logo-text span{font-size:12px;font-weight:400;margin-right:6px;color:var(--gray);}
-nav{display:flex;align-items:center;justify-content:center;background:var(--blue);}
+nav{display:flex;align-items:center;justify-content:center;background:var(--blue);min-height:46px;}
 .nav-item{position:relative;display:flex;align-items:center;gap:6px;padding:13px 22px;color:rgba(255,255,255,0.9);text-decoration:none;font-size:13px;letter-spacing:0.05em;transition:background .2s;white-space:nowrap;}
 .nav-item:hover,.nav-item.active{background:var(--blue-dark);color:white;}
 .nav-item .nav-icon{width:18px;height:18px;filter:brightness(0) invert(1);opacity:.85;}
@@ -175,7 +175,7 @@ footer{background:var(--blue-deeper);color:white;padding:52px 80px 24px;}
 <header>
   <div class="header-top">
     <a href="index.html" class="logo">
-      <img src="assets/logo.png" alt="株式会社不二設備工業所ロゴ">
+      <img src="assets/logo.png" alt="株式会社不二設備工業所" style="height:44px;width:auto;">
       <div class="logo-text">
         <span>株式会社</span>不二設備工業所
         <div style="font-family:'DM Mono',monospace;font-size:9px;font-weight:400;letter-spacing:0.12em;color:#aaa;margin-top:2px;">FUJI SETSUBI KOGYOSHO &nbsp;/&nbsp; Est. 1967</div>
@@ -387,6 +387,7 @@ footer{background:var(--blue-deeper);color:white;padding:52px 80px 24px;}
         <img src="assets/logo.png" alt="ロゴ">
         <span>株式会社 不二設備工業所</span>
       </div>
+      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.15em;color:rgba(255,255,255,0.35);margin-bottom:12px;">FUJI SETSUBI KOGYOSHO &nbsp;/&nbsp; Est. 1967</div>
       <p>〒531-0076 大阪市北区大淀中3丁目6番7号<br>TEL：06-6458-6341　FAX：06-6458-6344<br>創業：昭和42年（1967年）</p>
     </div>
     <div class="footer-nav">
@@ -416,7 +417,7 @@ footer{background:var(--blue-deeper);color:white;padding:52px 80px 24px;}
   </div>
   <div class="footer-bottom">
     <span>© 2025 株式会社 不二設備工業所 All Rights Reserved.</span>
-    <span>Osaka, Japan / Est. 1967</span>
+    <span style="font-family:'DM Mono',monospace;letter-spacing:0.12em;font-size:11px;">FUJI SETSUBI KOGYOSHO &nbsp;/&nbsp; Est. 1967</span>
   </div>
 </footer>
 
