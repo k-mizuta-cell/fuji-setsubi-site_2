@@ -305,20 +305,30 @@ main { min-height: 60vh; }
 
 .timeline-item {
   position: relative;
-  margin-bottom: 80px;
-  padding-left: 80px;
+  margin-bottom: 60px;
+  padding-left: 50px;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 14px;
+  top: 8px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--blue);
 }
 
 .timeline-date {
-  position: absolute;
-  left: 0;
-  top: 0;
+  position: relative;
+  left: auto;
+  top: auto;
+  display: inline-block;
   font-weight: bold;
   font-size: 1.2rem;
   color: var(--blue);
-  background: var(--off-white);
-  padding: 5px 0;
-  z-index: 1;
+  margin-bottom: 12px;
 }
 
 .history-grid {
@@ -343,6 +353,7 @@ main { min-height: 60vh; }
 }
 
 .photo-frame {
+  max-width: 280px;
   border: 5px solid var(--white);
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
   overflow: hidden;
@@ -356,13 +367,10 @@ main { min-height: 60vh; }
 
 .photo-frame img {
   width: 100%;
-  height: auto;
+  height: 220px;
+  object-fit: cover;
+  object-position: center top;
   display: block;
-  filter: grayscale(20%);
-  transition: 0.5s;
-}
-
-.photo-frame:hover img {
   filter: grayscale(0%);
   transform: scale(1.05);
 }
@@ -435,7 +443,10 @@ footer {
   <div class="header-top">
     <a href="index.html" class="logo">
       <img src="assets/logo.png" alt="株式会社不二設備工業所" style="height:44px;width:auto;">
-      <div class="logo-text"><span>株式会社</span>不二設備工業所</div>
+      <div class="logo-text">
+        <span>株式会社</span>不二設備工業所
+        <div style="font-family:'DM Mono',monospace;font-size:9px;font-weight:400;letter-spacing:0.12em;color:#aaa;margin-top:2px;">FUJI SETSUBI KOGYOSHO &nbsp;/&nbsp; Est. 1967</div>
+      </div>
     </a>
   </div>
   <nav>
@@ -587,10 +598,14 @@ footer {
               <h3>株式会社不二設備工業所 設立</h3>
               <p>創業者・水田輝義により創業。株式会社 不二設備工業所を設立しました。</p>
             </div>
-            <div class="history-visual">
-              <div class="photo-frame main-photo">
-                <img src="assets/history-photo3.jpg" alt="創業者 水田輝義">
+            <div class="history-visual" style="display:flex;gap:12px;flex-direction:row;">
+              <div class="photo-frame" style="flex:1;max-width:200px;">
+                <img src="assets/history-photo3.jpg" alt="創業者 水田輝義" style="width:100%;height:220px;object-fit:cover;object-position:center top;">
                 <span class="photo-caption">創業者 水田輝義</span>
+              </div>
+              <div class="photo-frame" style="flex:1;max-width:200px;">
+                <img src="assets/history-photo1.jpg" alt="創業当時の社屋" style="width:100%;height:220px;object-fit:cover;">
+                <span class="photo-caption">創業当時の社屋</span>
               </div>
             </div>
           </div>
@@ -650,16 +665,14 @@ footer {
       <div class="timeline-item">
         <div class="timeline-date">1978.09.26</div>
         <div class="timeline-content">
-          <div class="history-grid reverse">
-            <div class="history-text">
-              <h3>資本金2000万円に更改</h3>
-              <p>資本金を2000万円に増資。事業基盤をさらに強固なものとしました。</p>
-            </div>
-            <div class="history-visual">
-              <div class="photo-frame wide-photo">
-                <img src="assets/history-photo1.jpg" alt="当時の社屋">
-                <span class="photo-caption">当時の社屋</span>
-              </div>
+          <div class="history-text">
+            <h3>資本金2000万円に更改</h3>
+            <p>資本金を2000万円に増資。事業基盤をさらに強固なものとしました。</p>
+          </div>
+          <div class="history-visual" style="margin-top:16px;">
+            <div class="photo-frame" style="max-width:280px;">
+              <img src="assets/history-photo2.jpg" alt="創業当時の街並み" style="width:100%;height:220px;object-fit:cover;">
+              <span class="photo-caption">創業当時の街並み</span>
             </div>
           </div>
         </div>
@@ -743,8 +756,8 @@ footer {
             <p>将来の本社移転に向け、大阪市北区大淀中の土地を取得。</p>
           </div>
           <div class="history-visual">
-            <div class="photo-frame wide-photo">
-              <img src="assets/IMG_0963.PNG" alt="旧社屋">
+            <div class="photo-frame">
+              <img src="assets/old-office.jpg" alt="旧社屋" style="height:220px;object-fit:cover;">
               <span class="photo-caption">旧社屋</span>
             </div>
           </div>
@@ -764,20 +777,14 @@ footer {
       <div class="timeline-item">
         <div class="timeline-date">2018.01.05</div>
         <div class="timeline-content">
-          <div class="history-grid">
-            <div class="history-text">
-              <h3>本社社屋を整備</h3>
-              <p>新たな本社社屋を整備し、さらなる事業発展の基盤を強固にしました。</p>
-            </div>
-            <div class="history-visual">
-              <div class="photo-frame main-photo">
-                <img src="assets/office-photo1.png" alt="現在の社屋">
-                <span class="photo-caption">現在の社屋</span>
-              </div>
-              <div class="photo-frame sub-photo">
-                <img src="assets/office-photo2.png" alt="エントランス">
-                <span class="photo-caption">エントランス</span>
-              </div>
+          <div class="history-text">
+            <h3>本社社屋を整備</h3>
+            <p>新たな本社社屋を整備し、さらなる事業発展の基盤を強固にしました。</p>
+          </div>
+          <div class="history-visual">
+            <div class="photo-frame">
+              <img src="assets/work-photo1.png" alt="現在の社屋" style="height:220px;object-fit:cover;">
+              <span class="photo-caption">現在の社屋</span>
             </div>
           </div>
         </div>
