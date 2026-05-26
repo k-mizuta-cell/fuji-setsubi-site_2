@@ -38,7 +38,7 @@ header {
 .header-top {
   display: flex; align-items: center; justify-content: center;
   height: 72px;
-  padding: 12px 40px;
+  padding: 10px 40px;
   border-bottom: 1px solid var(--border);
 }
 
@@ -46,6 +46,8 @@ header {
   display: flex; align-items: center; gap: 12px;
   text-decoration: none;
 }
+
+.logo img { height: 44px; width: auto; }
 
 .logo-icon {
   width: 40px; height: 40px;
@@ -57,16 +59,15 @@ header {
 
 .logo-text {
   font-family: 'Noto Serif JP', serif;
-  font-size: 20px; font-weight: 700;
+  font-size: 19px; font-weight: 700;
   color: var(--text); letter-spacing: 0.05em;
 }
 
-.logo-text span { font-size: 13px; font-weight: 400; margin-right: 6px; color: var(--gray); }
+.logo-text span { font-size: 12px; font-weight: 400; margin-right: 6px; color: var(--gray); }
 
 nav {
   display: flex; align-items: center; justify-content: center;
   background: var(--blue);
-  padding: 0;
   min-height: 46px;
 }
 
@@ -823,7 +824,10 @@ footer {
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
-      <div style="font-family:'Noto Serif JP',serif;font-size:18px;font-weight:700;margin-bottom:4px;">株式会社 不二設備工業所</div>
+      <div class="footer-logo">
+        <img src="assets/logo.png" alt="ロゴ" style="height:44px;width:auto;">
+        <span>株式会社 不二設備工業所</span>
+      </div>
       <div style="font-size:11px;color:rgba(255,255,255,0.3);letter-spacing:0.15em;font-family:'DM Mono',monospace;margin-bottom:12px;">FUJI SETSUBI KOGYOSHO / Est. 1967</div>
       <p>〒531-0076 大阪市北区大淀中3丁目6番7号<br>TEL：06-6458-6341　FAX：06-6458-6344</p>
     </div>
